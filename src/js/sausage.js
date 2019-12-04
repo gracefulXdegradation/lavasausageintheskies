@@ -84,6 +84,7 @@ function init() {
                             const geometry = child.geometry;
                             geometry.center();
 							mesh = new THREE.Mesh( geometry, material );
+							mesh.rotation.x = -0.7;
 							scene.add( mesh );
                         }
                     });

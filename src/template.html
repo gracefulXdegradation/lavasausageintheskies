@@ -10,25 +10,62 @@
 
 <body>
   <div class="container">
-	<div class="cloud" id="cloud-back"></div>
-    <div class="cloud" id="cloud-mid"></div>
-    <div class="cloud" id="cloud-front"></div>
-	<!--   77, 327,109, 841, 2319, 5032, 1094, 892, 6739, 512, 84 -->
-	<svg width="0" height="0"> 
-	  <!--Top Layer-->
-	    <filter id="filter-back">
-	      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="0" />     
-	      <feDisplacementMap  in="SourceGraphic" scale="170" />
-	    </filter>
-	       <filter id="filter-mid">
-	        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="0"/>
-	      <feDisplacementMap  in="SourceGraphic" scale="150" />
-	    </filter>
-	    <filter id="filter-front">
-	        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="0"/>
-	      <feDisplacementMap  in="SourceGraphic" scale="100" />
-	    </filter>
-	</svg>
+  	<div id="clouds">
+  		<div class="cloud cloud-m cloud-1">
+			<div class="cloud-back"></div> 
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div> 
+		</div>
+
+		<div class="cloud cloud-l cloud-2">
+		    <div class="cloud-back"></div>
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div>
+	    </div>
+
+	    <div class="cloud cloud-s cloud-3">
+		    <div class="cloud-back"></div>
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div>
+	    </div>
+
+	    <div class="cloud cloud-m cloud-4">
+			<div class="cloud-back"></div> 
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div> 
+		</div>
+
+		<div class="cloud cloud-l cloud-5">
+			<div class="cloud-back"></div> 
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div> 
+		</div>
+
+		<div class="cloud cloud-l cloud-6">
+			<div class="cloud-back"></div> 
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div> 
+		</div>
+
+		<div class="cloud cloud-l cloud-7">
+			<div class="cloud-back"></div> 
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div> 
+		</div>
+
+		<div class="cloud cloud-s cloud-8">
+		    <div class="cloud-back"></div>
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div>
+	    </div>
+
+	    <div class="cloud cloud-s cloud-9">
+		    <div class="cloud-back"></div>
+		    <div class="cloud-mid"></div>
+		    <div class="cloud-front"></div>
+	    </div>
+	</div>
+
 	<canvas id="canvas" width="600" height="400"></canvas>
 	<div id="hs-box"></div>
 	<div id="sausage"></div>
@@ -93,27 +130,150 @@
 			}
 
 		</script>
-		<script id="vertexShaderSausage" type="x-shader/x-vertex">
-			varying vec2 vUv;
 
-			void main() {
-			    vUv = uv;
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-1">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="0" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="170" />
+		    </filter>
+		       <filter id="filter-mid-1">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="0"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="150" />
+		    </filter>
+		    <filter id="filter-front-1">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="0"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="120" />
+		    </filter>
+		</svg>
 
-			    gl_Position =   projectionMatrix * 
-			                    modelViewMatrix * 
-			                    vec4(position,1.0);
-			}
-		</script>
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-2">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="20" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="375" />
+		    </filter>
+		       <filter id="filter-mid-2">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="20"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="200" />
+		    </filter>
+		    <filter id="filter-front-2">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="20"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="140" />
+		    </filter>
+		</svg>
 
-		<script id="fragmentShaderSausage" type="x-shader/x-fragment">
-			uniform sampler2D texture1;
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-3">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.010" numOctaves="4" seed="111" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="200" />
+		    </filter>
+		       <filter id="filter-mid-3">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.010" numOctaves="2" seed="111"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="120" />
+		    </filter>
+		    <filter id="filter-front-3">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.010" numOctaves="2" seed="111"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="100" />
+		    </filter>
+		</svg>
 
-			varying vec2 vUv;
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-4">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="497" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="200" />
+		    </filter>
+		       <filter id="filter-mid-4">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="497"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="175" />
+		    </filter>
+		    <filter id="filter-front-4">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="497"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="130" />
+		    </filter>
+		</svg>
 
-			void main() {
-			    gl_FragColor = vec4(0.5, 0.2, 1.0, 1.0); 
-			}
-		</script>
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-5">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="310" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="320" />
+		    </filter>
+		       <filter id="filter-mid-5">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="310"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="150" />
+		    </filter>
+		    <filter id="filter-front-5">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="310"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="100" />
+		    </filter>
+		</svg>
+
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-6">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="675" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="320" />
+		    </filter>
+		       <filter id="filter-mid-6">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="675"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="150" />
+		    </filter>
+		    <filter id="filter-front-6">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="675"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="100" />
+		    </filter>
+		</svg>
+
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-7">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="666" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="320" />
+		    </filter>
+		       <filter id="filter-mid-7">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="666"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="150" />
+		    </filter>
+		    <filter id="filter-front-7">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="666"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="100" />
+		    </filter>
+		</svg>
+
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-8">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.010" numOctaves="4" seed="19" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="200" />
+		    </filter>
+		       <filter id="filter-mid-8">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.010" numOctaves="2" seed="19"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="120" />
+		    </filter>
+		    <filter id="filter-front-8">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.010" numOctaves="2" seed="19"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="100" />
+		    </filter>
+		</svg>
+
+		<svg width="0" height="0"> 
+		  <!--Top Layer-->
+		    <filter id="filter-back-9">
+		      <feTurbulence type="fractalNoise" baseFrequency="0.010" numOctaves="4" seed="909" />     
+		      <feDisplacementMap  in="SourceGraphic" scale="200" />
+		    </filter>
+		       <filter id="filter-mid-9">
+		        <feTurbulence type="fractalNoise"  baseFrequency="0.010" numOctaves="2" seed="909"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="120" />
+		    </filter>
+		    <filter id="filter-front-9">
+		        <feTurbulence type="fractalNoise" baseFrequency="0.010" numOctaves="2" seed="909"/>
+		      <feDisplacementMap  in="SourceGraphic" scale="100" />
+		    </filter>
+		</svg>
 </body>
 
 </html>

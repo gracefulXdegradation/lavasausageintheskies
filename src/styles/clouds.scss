@@ -1,0 +1,156 @@
+@keyframes flow {
+  from {
+    transform: translate(-200px);
+  }
+  
+  to {
+    transform: translate(200px);
+  }
+}
+
+@mixin flowAnimation($from, $to, $i) {
+  @keyframes flow-#{$i} {
+    from {
+      transform: translate($from);
+    }
+    
+    to {
+      transform: translate($to);
+    }
+  }
+
+  animation: flow-#{$i} infinite;
+  animation-timing-function: linear;
+}
+
+#clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+
+  & > * {
+    width: 500px;
+    height: 275px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &.cloud-l {
+    z-index: 0;
+    animation-duration: 40s;
+  }
+
+  &.cloud-m {
+    z-index: 2;
+    animation-duration: 30s;
+  }
+  &.cloud-s {
+    z-index: 4;
+    animation-duration: 25s;
+  }
+}
+
+@for $i from 1 through 9 {
+  .cloud-#{$i} {
+    & > .cloud-back {
+      filter: url(#filter-back-#{$i});
+      box-shadow: 300px 300px 30px -20px #fff;
+    }
+
+    & > .cloud-mid {
+      filter: url(#filter-mid-#{$i});
+      box-shadow: 300px 340px 70px -60px rgba(158, 168, 179, 0.5);
+    }
+
+    & > .cloud-front {
+      filter: url(#filter-front-#{$i});
+      box-shadow: 300px 370px 60px -100px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.cloud-1 {
+  @include flowAnimation(-500px, 350px, 1);
+  transform: transition(100px);
+  animation-delay: -15s;
+  top: 20px;
+  & > * {
+    transform: scale(0.45);
+  }
+}
+
+.cloud-2 {
+  @include flowAnimation(-630px, 390px, 2);
+  top: -220px;
+  animation-delay: -20s;
+  & > * {
+    transform: scale(0.6);
+  }
+}
+
+.cloud-3 {
+  @include flowAnimation(-360px, 510px, 3);
+  top: -40px;
+  animation-delay: -2s;
+  & > * {
+    transform: scale(0.3) rotateY(180deg);
+  }
+}
+
+.cloud-4 {
+  @include flowAnimation(-500px, 350px, 4);
+  transform: transition(100px);
+  top: -150px;
+  & > * {
+    transform: scale(0.45);
+  }
+}
+
+.cloud-5 {
+  @include flowAnimation(-630px, 390px, 5);
+  top: 50px;
+  animation-delay: -30s;
+  & > * {
+    transform: scale(0.6);
+  }
+}
+
+.cloud-6 {
+  @include flowAnimation(-630px, 390px, 6);
+  top: -120px;
+  & > * {
+    transform: scale(0.6);
+  }
+}
+
+.cloud-7 {
+  @include flowAnimation(-630px, 390px, 7);
+  top: 80px;
+  animation-delay: -10s;
+  & > * {
+    transform: scale(0.6);
+  }
+}
+
+.cloud-8 {
+  @include flowAnimation(-360px, 510px, 8);
+  top: 100px;
+  animation-delay: -15s;
+  & > * {
+    transform: scale(0.3);
+  }
+}
+
+.cloud-9 {
+  @include flowAnimation(-360px, 510px, 9);
+  top: -180px;
+  animation-delay: -10s;
+  & > * {
+    transform: scale(0.3);
+  }
+}
