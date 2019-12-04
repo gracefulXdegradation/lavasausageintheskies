@@ -3,6 +3,6 @@ import hs from './js/hs';
 import sausage from './js/sausage';
 import './styles/index.scss'
 
-// sg();
-// hs();
+sg();
+hs();
 sausage();

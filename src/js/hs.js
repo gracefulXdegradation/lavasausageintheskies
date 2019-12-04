@@ -90,11 +90,9 @@ function hs() {
 		group.position.y = 100;
 		scene.add( group );
 		var loader = new TTFLoader();
-		loader.load( './fonts/ZURCH.ttf', function ( json ) {
+		loader.load( './fonts/BauhausRegular.ttf', function ( json ) {
 			font = new THREE.Font( json );
-			createText('IETY', - (size + 20));
-			createText('SNOB', 0);
-			createText('HIGH', size + 20);
+			createText('SAUSAGE', 0);
 		} );
 		// var plane = new THREE.Mesh(
 		// 	new THREE.PlaneBufferGeometry( 10000, 10000 ),

@@ -139,7 +139,7 @@
 
 .cloud-8 {
   @include flowAnimation(-360px, 510px, 8);
-  top: 100px;
+  top: 130px;
   animation-delay: -15s;
   & > * {
     transform: scale(0.3);

@@ -27,13 +27,10 @@ function init() {
 	container.appendChild( renderer.domElement );
 	renderer.autoClear = false;
 
-
-
-
 	camera = new THREE.PerspectiveCamera( 35, width / height, 1, 3000 );
-	camera.position.z = 2;
-	camera.position.y = 1;
-	camera.position.x = -2;
+	camera.position.z = 1.7;
+	camera.position.y = 2.3;
+	camera.position.x = -1.4;
 
 	controls = new OrbitControls(camera, renderer.domElement);
 
@@ -65,8 +62,6 @@ function init() {
 
 	uniforms[ "texture1" ].value.wrapS = uniforms[ "texture1" ].value.wrapT = THREE.RepeatWrapping;
 	uniforms[ "texture2" ].value.wrapS = uniforms[ "texture2" ].value.wrapT = THREE.RepeatWrapping;
-
-	var size = 0.65;
 
 	var material = new THREE.ShaderMaterial( {
 		uniforms: uniforms,
@@ -132,11 +127,11 @@ function render() {
 
 if(mesh) {
 	mesh.rotation.x += 0.05 * delta;
-	mesh.scale.x = 0.4;
-	mesh.scale.y = 0.4;
-	mesh.scale.z = 0.4;
-	mesh.position.y = 0.2;
-	mesh.position.x = 0.1;
+	mesh.scale.x = 0.45;
+	mesh.scale.y = 0.45;
+	mesh.scale.z = 0.45;
+	mesh.position.y = 0.1;
+	mesh.position.x = 0.3;
 }
 
 	// controls.update();
