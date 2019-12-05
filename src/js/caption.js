@@ -9,9 +9,7 @@ import sausage4 from '../images/sausage-4.svg'
 
 import * as THREE from '../lib/three.module.js';
 
-function sashaGrinevich() {
-	// let sasha = [];
-// let grinevich = [];
+function caption() {
 let lava = [], sausage = [];
 function _init() {
 	const imgs = [lava1,lava2,lava3,lava4,sausage1,sausage2,sausage3,sausage4].map(src => {
@@ -36,9 +34,6 @@ function draw() {
 
 	ctx.clearRect(0, 0, w, h); // clear canvas
 
-	ctx.fillStyle = "#6EB8E2";
-	ctx.strokeStyle="#000000";
-
 	const now = new Date().getTime();
 
 	ctx.save();
@@ -57,24 +52,10 @@ function draw() {
 		ctx.drawImage(sausageNow, 0, 0, 100 * sausageNow.width / sausageNow.height, 100);
 		ctx.restore();
 
-	// ctx.save();
-// 		ctx.translate(100, 150);
-// 		const sashaNow = sasha[Math.floor(now / 100) % 4];
-// 		ctx.rotate(toRadians(-20));
-// 		ctx.drawImage(sashaNow, 0, 0, 120, 120 * sashaNow.height / sashaNow.width);
-// 		ctx.restore();
-
-// 		ctx.save();
-// 		ctx.translate(270, 110);
-// 		ctx.rotate(toRadians(20));
-// 		const grinevichNow = grinevich[Math.floor(now / 100) % 4];
-// 		ctx.drawImage(grinevichNow, 0, 0, 200, 200 * grinevichNow.height / grinevichNow.width);
-// 		ctx.restore();
-
 		window.requestAnimationFrame(draw);
 };
 
 _init();
 }
 
-export default sashaGrinevich;
+export default caption;

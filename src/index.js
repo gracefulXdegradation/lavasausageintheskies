@@ -1,8 +1,6 @@
-import sg from './js/sg';
-import hs from './js/hs';
+import caption from './js/caption';
 import sausage from './js/sausage';
 import './styles/index.scss'
 
-sg();
-// hs();
+caption();
 sausage();
