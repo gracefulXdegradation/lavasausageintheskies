@@ -4,5 +4,5 @@ import sausage from './js/sausage';
 import './styles/index.scss'
 
 sg();
-hs();
+// hs();
 sausage();
